@@ -19,12 +19,6 @@ export default function App() {
     }
     fet()
   }, [reRender])
-  useEffect(()=> {
-    const fet = async () => {
-      setIsAuth(await AuthController.isAuthCheck())
-    }
-    fet()
-  }, [])
 
   return (
     <AuthContext.Provider value={{setReRender, reRender, isAuth, setIsAuth, login: AuthController.login, register: AuthController.register, logout: AuthController.logout}}>
